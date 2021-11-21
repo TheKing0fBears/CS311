@@ -18,4 +18,14 @@ class Node:
    for i in range (1, len(self.children)):
       self.children[i].children = self.children[0].children[:]
    
-  def printout(self,current_layer_number,node_per_layer_map
+  def printout(self,current_layer_number,node_per_layer_map)
+      if current_layer_number >= len(node_per_layer_map):
+         print(f"{self.node_name}")
+         return
+      print(f"{self.node_name} is connected to:")
+      for i in range(len(self.children)):
+          self.children[i].printout(current_layer_number+1,node_per_layer_map)
+                                     
+                                      
+new_node - Node()
+new_node.make_children(0,NODE_COUNT_PER_LAYER)
