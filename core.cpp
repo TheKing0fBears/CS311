@@ -2,7 +2,7 @@
 #include <fstream>
 #include <cstring>
 #include <cstdlib>
-#include "Core_Class.h"
+#include "Core.h"
 
 using namespace std;
 
