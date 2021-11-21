@@ -2,15 +2,9 @@
 #include <fstream>
 #include <cstring>
 #include <cstdlib>
+#include "Core_Class.h"
 
 using namespace std;
-
-struct Node
-{
-  String name;
-  double weight;
-  Node children[];
-};
 
 int main()
 {
