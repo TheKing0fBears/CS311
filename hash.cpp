@@ -2,8 +2,8 @@
 Templated created by Kazumi Slott
 CS311
 
-Your name: ??????
-Your programmer number: ?????
+Your name: Kyle Ratcliffe
+Your programmer number: 29
 Hours spent: ???
 Any difficulties?: ??????
 *********************/
@@ -24,7 +24,7 @@ class entry //this is basically a node
   string name;
   int age;
   double GPA;
-  //????? next; //points to the next entry
+  entry next; //points to the next entry
 
 public:
   entry() { ID = name = "", age = -999, GPA = -999.0, next = NULL; }
@@ -38,7 +38,7 @@ public:
 
 class hashTbl
 {
-  //????? table;   //table points to a dynamic array. Each slot points to an entry, which points to the next entry, ...
+  entry *table;   //table points to a dynamic array. Each slot points to an entry, which points to the next entry, ...
   int size; //size of the array
 public:
   hashTbl(int size);
@@ -60,9 +60,9 @@ public:
 //s is the size of the table
 hashTbl::hashTbl(int s)
 {
-  //set private member size
-  //make a dynamic array that has s slots
-  //put NULL in each slot of the array. Remember Each slot contains a pointer to an entry.
+  size=s;
+  table= new entry[s];
+	//put NULL in each slot of the array. Remember Each slot contains a pointer to an entry.
 }
 
 //destructor
